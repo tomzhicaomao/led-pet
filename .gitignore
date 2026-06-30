@@ -1,0 +1,36 @@
+# PlatformIO
+.pio/
+.pioenvs/
+.piolibdeps/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Build artifacts
+build/
+*.o
+*.d
+*.a
+*.elf
+*.bin
+*.map
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Python
+*.egg-info/
+dist/
+venv/
+.env
+
+# Logs
+*.log

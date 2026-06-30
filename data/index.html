@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LED Pet - Parent Console</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div id="app">
+        <h1>🐾 LED Pet</h1>
+        <div class="card">
+            <div class="pet-name" id="pet-name">Dragon</div>
+            <div class="stage-badge" id="stage-badge">Egg</div>
+            <div class="mood" id="mood">happy</div>
+        </div>
+        <div class="card">
+            <div class="stat">⭐ <strong id="points">0</strong> pts</div>
+            <div class="stat">🍎x<span id="food0">0</span> 🍗x<span id="food1">0</span> 🎂x<span id="food2">0</span> ⭐x<span id="food3">0</span> 💎x<span id="food4">0</span></div>
+        </div>
+        <div class="card">
+            <div class="section-title">Send Reward</div>
+            <div class="reward-grid">
+                <button class="btn-reward" onclick="sendReward(1)">+1 ⭐</button>
+                <button class="btn-reward" onclick="sendReward(3)">+3 ⭐</button>
+                <button class="btn-reward" onclick="sendReward(5)">+5 ⭐</button>
+                <button class="btn-reward" onclick="sendReward(10)">+10 ⭐</button>
+            </div>
+            <div class="reason-row">
+                <input type="text" id="reason" placeholder="Reason (optional)" maxlength="15">
+                <input type="password" id="pin" placeholder="PIN" maxlength="4" value="0000">
+            </div>
+            <button class="btn-custom" onclick="sendCustomReward()">Send Custom</button>
+            <input type="number" id="custom-pts" value="3" min="1" max="99">
+        </div>
+        <div class="card">
+            <div class="section-title">Reward History</div>
+            <div id="history"></div>
+        </div>
+        <div class="card">
+            <button class="btn-pin" onclick="showPinChange()">Change PIN</button>
+        </div>
+    </div>
+    <script src="/app.js"></script>
+</body>
+</html>
